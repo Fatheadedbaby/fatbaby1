@@ -21,24 +21,24 @@ var game2Expensive = [];
 
 var i;
 
+
+//loop that makes a list of random numbers without repeating any numbers
 function gameRandomizer() {
 	while (game2Expensive.length < 50) {
 		newNum = (Math.floor(Math.random() * 1000) + 1);
-		game2Expensive.push(newNum);
 
 
 		if (game2Expensive.length > 1) {
-			
 
+			for (i = 0; i < (game2Expensive.legnth); i++) {
 
-			for (i = 0; i < ((gameExpensive.legnth) - 1); i++) {
-
-				while (gameExpensive[i] = newNum) {
-					
+				while (game2Expensive[i] = newNum) {
+					newNum = (Math.floor(Math.random() * 1000) + 1);	
 				}
 			}
 		}
 
+		game2Expensive.push(newNum);
 	}
 
 	randomNumber()
@@ -51,6 +51,7 @@ function gameRandomizer() {
 function randomNumber() {
 	randomNumberVar = Math.floor(Math.random() * 1000) + 1;
 	document.write(randomNumberVar);
+	document.write("<br> </br>");
 	document.write(game2Expensive);
 	document.write("<br> </br>");
 	document.write(game2Expensive[0]);

@@ -8,7 +8,12 @@
 
 
 	<script>
+		//This makes a brand new empty array.
 		var array = [];
+
+
+
+		//This function will randomize the order the numbers in the array are written.
 		function shuffle(a) {
 			var j, x, i;
 			for (i = a.length; i; i--) {
@@ -20,6 +25,9 @@
 			
 		}
 		
+
+
+		//This function will fill the empty array with every number from 1 to 1000. 
 		function createArray() {
 			var i = 0; 
 			while (i <=1000) {
@@ -30,7 +38,7 @@
 		}
 		
 		
-
+		
 		createArray();
 		shuffle(array);
 		

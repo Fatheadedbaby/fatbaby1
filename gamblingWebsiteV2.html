@@ -25,7 +25,7 @@ var randomTickets = [];
 
 var i;
 
-
+var randomTicketLocation = 0;
 
 function RandNums() {
 	var i = 0; 
@@ -37,33 +37,77 @@ function RandNums() {
 
 
 function shuffle(a) {
-			var j, x, i;
-			for (i = a.length; i; i--) {
-				j = Math.floor(Math.random() * i);
-				x = a[i - 1];
-				a[i - 1] = a[j];
-				a[j] = x;
-			}
+	var j, x, i;
+	for (i = a.length; i; i--) {
+		j = Math.floor(Math.random() * i);
+		x = a[i - 1];
+		a[i - 1] = a[j];
+		a[j] = x;
+	}
 			
 }
 
 
 
+function giveRandomTickets(arrayName, odds) {
+//odd are out of 1000	
+	while (randomTicketLocation < odds) {
+		arrayName.push(randomTickets[randomTicketLocation]);
+		randomTicketLocation = randomTicketLocation + 1;
+	}
+
+}
+
+
 function startGambling() {
-RandNums();	
-shuffle(randomTickets);
+	RandNums();	
+	shuffle(randomTickets);
+	
+	
+	
+	
+	
+	giveRandomTickets(expensiveGame1, 25)
+	giveRandomTickets(expensiveGame2, 25)
+	giveRandomTickets(cheapGame1, 118)
+	giveRandomTickets(cheapGame2, 118)
+	giveRandomTickets(cheapGame3, 118)
+	giveRandomTickets(cheapGame4, 118)
+	giveRandomTickets(cheapGame5, 118)
+	giveRandomTickets(cheapGame6, 118)
+	giveRandomTickets(cheapGame7, 120)
+	giveRandomTickets(cheapGame8, 122)
+	
+	
+	
+	
+	
+	
+	
+	
+	document.write(expensiveGame1);
+	document.write("<br><br>");
+	document.write(expensiveGame2);
+	document.write("<br><br>");
+	document.write(cheapGame1);
+	document.write("<br><br>");
+	document.write(cheapGame2);
+	document.write("<br><br>");
+	document.write(cheapGame3);
+	document.write("<br><br>");
+	document.write(cheapGame4);
+	document.write("<br><br>");
+	document.write(cheapGame5);
+	document.write("<br><br>");
+	document.write(cheapGame6);
+	document.write("<br><br>");
+	document.write(cheapGame7);
+	document.write("<br><br>");
+	document.write(cheapGame8);
 
-
-document.write(randomTickets);
 	
 }
 
-	
-	
-	
-	
-	
-	
 	
 	
 	

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+<script>
+//Button to open case.
+document.write("<button onclick='startGambling()'>Win Random Game</button>");
+//Variable that hold the random number that is generated.	
+var randomNumberVar;
+//Variables that hold the games that the user has a chance to win.
+var cheapGame1 = [];
+var	cheapGame2 = [];
+var	cheapGame3 = [];
+var	cheapGame4 = [];
+var	cheapGame5 = [];
+var	cheapGame6 = [];
+var	cheapGame7 = [];
+var	cheapGame8 = [];
+var expensiveGame1 = [];
+var expensiveGame2 = [];
+var randomTickets = [];
+
+var i;
+
+
+
+function RandNums() {
+	var i = 0; 
+	while (i <=1000) {
+		i = i + 1
+		randomTickets.push(i);	
+	}	
+}
+
+
+function shuffle(a) {
+			var j, x, i;
+			for (i = a.length; i; i--) {
+				j = Math.floor(Math.random() * i);
+				x = a[i - 1];
+				a[i - 1] = a[j];
+				a[j] = x;
+			}
+			
+}
+
+
+
+function startGambling() {
+RandNums();	
+shuffle(randomTickets);
+
+
+document.write(randomTickets);
+	
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+
+
+
+
+</body>
+</html>

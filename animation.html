@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Amimation</title>
+</head>
+
+<style>
+	#container{
+		height: 400px;
+		width: 400px;
+		position: relative;
+		outline: 1px solid black;
+	}
+	
+	#char1{
+		height: 50px;  
+		width: 50px;
+		outline: 1px solid black;
+		position: absolute;
+		background-color: blue;
+		
+	}
+	
+	
+</style>
+
+
+<body>
+
+<button onclick="myMove()"> Start Animation </button>
+
+
+<div id="container">
+<div id="char1"> </div>
+</div>
+
+<script>
+	function myMove() {
+		var char = document.getElementById("char1");
+		var xPos = 0;
+		var yPos = 0;
+		var laps = 0;
+		var id = setInterval(frame, 10);
+		function frame() {
+    			if (xPos == 0) {
+				moveRightDown()
+			}
+ 		
+			
+				
+			function moveRightDown() {
+				while (xPos < 350) {
+					xPos++;
+					yPos++;
+					char.style.top = yPos + 'px';
+					char.style.left = xPos + 'px';	
+				}
+				if (xPos ==350) {
+					moveLeftUp()
+				}
+			}
+			
+			function moveRightUp() {
+				xPos++;
+				yPos--;
+				char.style.top = yPos + 'px';
+				char.style.left = xPos + 'px'; 
+			}
+			
+			function moveLeftDown() {
+				xPos--;
+				yPos++;
+				char.style.top = yPos + 'px';
+				char.style.left = xPos + 'px';				
+			}
+			
+			function moveLeftUp() {
+				
+				while (xPos > 0) {
+					xPos--;
+					yPos--;
+					char.style.top = yPos + 'px';
+					char.style.left = xPos + 'px';				
+				}
+				if (xPos == 0)	{
+					moveRightDown()
+				}
+								
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+ 
+
+
+			//if () {
+			//	xPos--;
+			//	yPos--;
+			//	char.style.top = yPos
+			//} else {
+			//	xPos++;
+			//	yPos++;
+			//	char.style.top = yPos + 'px';
+			//	char.style.left = xPos + 'px';
+			//}
+			
+		}
+	}
+	
+	
+</script>
+
+
+
+
+</body>
+
+
+
+</html>
